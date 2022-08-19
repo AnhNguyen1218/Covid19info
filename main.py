@@ -38,27 +38,27 @@ def get_country_info():
     newconfirmed = data["Countries"][countryid]["NewConfirmed"]
     totalconfirmed = data["Countries"][countryid]["TotalConfirmed"]
     covid_msg = f"Last number of new confirmed cases in {searchcountry}:" \
-        f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
+                f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
     # Return covid msg to gui
     output_text.set(covid_msg)
 
 
 # Info message on the cases country
 def info():
-    List = open('txt_files/Info message.txt')
-    data = List.read()
+    info_message = open('txt_files/Info message.txt')
+    data = info_message.read()
     messagebox.showinfo(title="Info!", message=data)
 
 
 # Function for saving text to text file
 def save_file():
-    stuff = open("Saved_location/Saved_locations.txt", "a")
+    locations = open("Saved_location/Saved_locations.txt", "a")
     if file_name.get() == "":
         messagebox.showerror("")
     else:
-        stuff.write(file_name.get())
-        stuff.write("\n")
-    stuff.close()
+        locations.write(file_name.get())
+        locations.write("\n")
+    locations.close()
 
 
 # Delete the entry field after you press button
@@ -82,30 +82,30 @@ tab_control.add(tab4, text='Vaccination')
 tab_control.add(tab5, text='Travelling')
 
 # Tab1 started here
-img = PhotoImage(file="img/BG1.png")
-label = Label(tab1, image=img)
-label.place(x=0, y=0)
+top_img1 = PhotoImage(file="img/BG1.png")
+img1 = Label(tab1, image=top_img1)
+img1.place(x=0, y=0)
 # Code for the clock
 clock = Label(tab1, bg='lightgrey', foreground='black',
               font=('arial', 18, 'bold'))
 update()
 clock.pack(pady=2, anchor='e')
 # Main page covid19 info
-List = open('txt_files/COVID_19.txt')
-data = List.read()
-text = Label(tab1, text=data, fg="black", font=('arial', 12, 'bold'))
-text.pack(padx=30, pady=50, ipadx=30)
+covid_info = open('txt_files/COVID_19.txt')
+data = covid_info.read()
+covid = Label(tab1, text=data, fg="black", font=('arial', 12, 'bold'))
+covid.pack(padx=30, pady=50, ipadx=30)
 # Details of contact
-List = open('txt_files/Contact_us.txt')
-data = List.read()
-text2 = Label(tab1, text=data, bg="lightgrey", fg="black", height=3, width=120,
-              font=("ariel", 12))
-text2.pack(anchor='sw')
+contact_us = open('txt_files/Contact_us.txt')
+data = contact_us.read()
+details = Label(tab1, text=data, bg="lightgrey", fg="black", height=3, width=120,
+                font=("ariel", 12))
+details.pack(anchor='sw')
 
 # Tab2 started here
-img2 = PhotoImage(file="img/BG2.png")
-label2 = Label(tab2, image=img2)
-label2.pack()
+top_img2 = PhotoImage(file="img/BG2.png")
+img2 = Label(tab2, image=top_img2)
+img2.pack()
 # Create Label
 lbl = Label(tab2, text="Enter Country:", font=("ariel", 15, "bold"))
 lbl.pack(padx=5, pady=50, anchor='center')
