@@ -38,7 +38,7 @@ def get_country_info():
     newconfirmed = data["Countries"][countryid]["NewConfirmed"]
     totalconfirmed = data["Countries"][countryid]["TotalConfirmed"]
     covid_msg = f"Last number of new confirmed cases in {searchcountry}:" \
-                f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
+        f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
     # Return covid msg to gui
     output_text.set(covid_msg)
 
