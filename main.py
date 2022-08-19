@@ -54,7 +54,7 @@ def info():
 def save_file():
     locations = open("Saved_location/Saved_locations.txt", "a")
     if file_name.get() == "":
-        messagebox.showerror("")
+        messagebox.showerror(title="Error", message="Please enter a valid place")
     else:
         locations.write(file_name.get())
         locations.write("\n")
