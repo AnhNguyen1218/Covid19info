@@ -38,7 +38,7 @@ def get_country_info():
     newconfirmed = data["Countries"][countryid]["NewConfirmed"]
     totalconfirmed = data["Countries"][countryid]["TotalConfirmed"]
     covid_msg = f"Last number of new confirmed cases in {searchcountry}:" \
-                f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
+        f"{newconfirmed}.\nThe total cases are:{totalconfirmed}"
     # Return covid msg to gui
     output_text.set(covid_msg)
 
@@ -100,8 +100,8 @@ covid.pack(padx=30, pady=50, ipadx=30)
 # Details of contact
 contact_us = open('txt_files/Contact_us.txt')
 data = contact_us.read()
-details = Label(tab1, text=data, bg="lightgrey", fg="black", height=3, width=120,
-                font=("ariel", 12))
+details = Label(tab1, text=data, bg="lightgrey", fg="black", height=3,
+                width=120, font=("ariel", 12))
 details.pack(anchor='sw')
 
 # Tab2 started here
