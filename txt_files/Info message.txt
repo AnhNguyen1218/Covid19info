@@ -1,3 +1,4 @@
 Important info: This COVID cases finding has no error message
 If it shows nothing then please check whether you spelt it
-right or wrong.
+right or wrong. It will be an error on my part if you are right. Sorry for the inconvenient
+Warning: if the country has space between the name a - (dash) is required (eg:new zealand => new-zealand)
