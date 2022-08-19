@@ -58,6 +58,8 @@ def save_file():
     else:
         locations.write(file_name.get())
         locations.write("\n")
+        if file_name.get().isalnum() == False:
+            messagebox.showerror(title="Error", message="Please input a valid place")
     locations.close()
 
 
